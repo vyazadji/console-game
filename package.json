@@ -1,0 +1,28 @@
+{
+  "name": "expression-generator",
+  "version": "0.1.0",
+
+  "description": "A command-line console-game for generating a random math expression",
+  "author": "Vasiliy Yazadji",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "coffee-script": "~1.9.1",
+    "commander": "~2.7.1"
+  },
+  "devDependencies": {
+    "watch": "latest",
+    "mocha" : "latest"
+  },
+  "bin": {
+    "expression-generator": "main.js"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "build:watch": "watch 'npm run start' .",
+    "test":        "./node_modules/mocha/bin/mocha  --compilers coffee:coffee-script/register ./test",
+    "test:watch":  "./node_modules/mocha/bin/mocha  --compilers coffee:coffee-script/register -w ./test"
+  }
+
+}
